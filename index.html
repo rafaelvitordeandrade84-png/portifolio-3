@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hero</title>
@@ -125,45 +126,6 @@
 </section>
 
 
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-/* ── FEATURES ── */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".features-top",
-    start: "top 80%",
-  }
-})
-  .from(".features-badge", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  })
-  .from(".features-title", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power3.out",
-    clearProps: "all"
-  }, "-=0.3");
-
-gsap.from(".cards-grid .card", {
-  scrollTrigger: {
-    trigger: ".cards-grid",
-    start: "top 85%",
-  },
-  opacity: 0,
-  y: 60,
-  duration: 0.7,
-  stagger: 0.15,
-  ease: "power3.out",
-  clearProps: "all"
-});
-
-</script>
 
 
 
@@ -189,40 +151,6 @@ gsap.from(".cards-grid .card", {
 
     </div>
   </section>
-
-
-<script>
-
-/* ── STATEMENT: Animações de Scroll (GSAP) ── */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".statement-section",
-    start: "top 75%",
-  }
-})
-  .from(".statement-badge", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  })
-  .from(".statement-title", {
-    opacity: 0,
-    y: 40,
-    duration: 0.9,
-    ease: "power3.out",
-    clearProps: "all"
-  }, "-=0.3")
-  .from(".statement-cta", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4");
-
-</script>
 
 
 
@@ -275,60 +203,6 @@ gsap.timeline({
     </div>
   </section>
 
-
-<script>
-  /* ── STEPS: Animações de Scroll (GSAP) ── */
-
-// Coluna esquerda
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".steps-left",
-    start: "top 75%",
-  }
-})
-  .from(".statement-badge2", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  })
-  .from(".steps-left h2", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power3.out",
-    clearProps: "all"
-  }, "-=0.3")
-  .from(".steps-left p", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4")
-  .from(".steps-cta", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4");
-
-// Cards (stagger)
-gsap.from(".step-card", {
-  scrollTrigger: {
-    trigger: ".steps-cards",
-    start: "top 85%",
-  },
-  opacity: 0,
-  y: 40,
-  duration: 0.6,
-  stagger: 0.12,
-  ease: "power3.out",
-  clearProps: "all"
-});
-</script>
 
 
 
@@ -393,56 +267,6 @@ gsap.from(".step-card", {
       </div>
     </div>
   </section>
-
-
-<script>
-  /* ── BENEFITS: Animações de Scroll (GSAP) ── */
-
-// Badge + Título + Descrição
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".benefits-top",
-    start: "top 75%",
-  }
-})
-  .from(".benefits-badge", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  })
-  .from(".benefits-title", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power3.out",
-    clearProps: "all"
-  }, "-=0.3")
-  .from(".benefits-desc", {
-    opacity: 0,
-    y: 30,
-    duration: 0.7,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.5");
-
-// Cards (stagger)
-gsap.from(".benefit-card", {
-  scrollTrigger: {
-    trigger: ".benefits-cards",
-    start: "top 85%",
-  },
-  opacity: 0,
-  y: 40,
-  duration: 0.6,
-  stagger: 0.12,
-  ease: "power3.out",
-  clearProps: "all"
-});
-</script>
-
-
 
 
 
@@ -525,89 +349,6 @@ gsap.from(".benefit-card", {
   </div>
 
 
-<script>
-  /* ── FAQ: Animações de Scroll (GSAP) ── */
-
-// Badge + Título + Descrição + CTA
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".faq-top",
-    start: "top 75%",
-  }
-})
-  .from(".faq-badge", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  })
-  .from(".faq-title", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power3.out",
-    clearProps: "all"
-  }, "-=0.3")
-  .from(".faq-desc", {
-    opacity: 0,
-    y: 25,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4")
-  .from(".faq-cta", {
-    opacity: 0,
-    y: 25,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4");
-
-// Lista de perguntas (stagger)
-gsap.from(".faq-item", {
-  scrollTrigger: {
-    trigger: ".faq-list",
-    start: "top 85%",
-  },
-  opacity: 0,
-  y: 20,
-  duration: 0.5,
-  stagger: 0.08,
-  ease: "power2.out",
-  clearProps: "all"
-});
-
-
-/* ── CTA BANNER: Animações de Scroll (GSAP) ── */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".cta-banner-inner",
-    start: "top 80%",
-  }
-})
-  .from(".cta-banner-title", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power3.out",
-    clearProps: "all"
-  })
-  .from(".cta-banner-desc", {
-    opacity: 0,
-    y: 30,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4")
-  .from(".cta-banner-btn", {
-    opacity: 0,
-    y: 25,
-    duration: 0.6,
-    ease: "power2.out",
-    clearProps: "all"
-  }, "-=0.4");
-</script>
 
 
 
@@ -618,44 +359,6 @@ gsap.timeline({
 
 
 
-
-  <script>
-    var btn = document.getElementById('hamburger');
-    var menu = document.getElementById('mobileMenu');
-
-    btn.addEventListener('click', function() {
-      var isOpen = menu.classList.contains('open');
-      if (isOpen) {
-        menu.classList.remove('open');
-        btn.classList.remove('active');
-        document.body.style.overflow = '';
-      } else {
-        menu.classList.add('open');
-        btn.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-
-    document.querySelectorAll('.mobile-link, .mobile-cta').forEach(function(link) {
-      link.addEventListener('click', function() {
-        menu.classList.remove('open');
-        btn.classList.remove('active');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = this.closest('.faq-item');
-        var isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(function(el) {
-          el.classList.remove('open');
-        });
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-  </script>
 
 
 <!-- BOTÃO FLUTUANTE WHATSAPP -->
@@ -673,6 +376,248 @@ gsap.timeline({
     </svg>
   </div>
 </a>
+
+
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ─── HAMBURGER ─── */
+var hambBtn = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobileMenu');
+
+hambBtn.addEventListener('click', function() {
+  var isOpen = mobileMenu.classList.contains('open');
+  if (isOpen) {
+    mobileMenu.classList.remove('open');
+    hambBtn.classList.remove('active');
+    document.body.style.overflow = '';
+  } else {
+    mobileMenu.classList.add('open');
+    hambBtn.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+});
+
+document.querySelectorAll('.mobile-link, .mobile-cta').forEach(function(link) {
+  link.addEventListener('click', function() {
+    mobileMenu.classList.remove('open');
+    hambBtn.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+/* ─── FAQ ─── */
+document.querySelectorAll('.faq-question').forEach(function(faqBtn) {
+  faqBtn.addEventListener('click', function() {
+    var item = this.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+/* ─── ANIMAÇÕES SCROLL ─── */
+// Só executa após TODOS os recursos (imagens, etc.) estarem carregados
+window.addEventListener('load', function() {
+
+  // — FEATURES (#projetos) —
+  gsap.from('.features-badge, .features-title', {
+    scrollTrigger: {
+      trigger: '.features-top',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.7,
+    ease: 'power2.out',
+    stagger: 0.15
+  });
+
+  gsap.from('.card', {
+    scrollTrigger: {
+      trigger: '.cards-grid',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 40,
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.12
+  });
+
+  // — STATEMENT (#sobre) —
+  gsap.from('.statement-badge', {
+    scrollTrigger: {
+      trigger: '.statement-inner',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 20,
+    duration: 0.5,
+    ease: 'power2.out'
+  });
+
+  gsap.from('.statement-title', {
+    scrollTrigger: {
+      trigger: '.statement-inner',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    ease: 'power3.out',
+    delay: 0.15
+  });
+
+  gsap.from('.statement-cta', {
+    scrollTrigger: {
+      trigger: '.statement-inner',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 20,
+    duration: 0.5,
+    ease: 'power2.out',
+    delay: 0.3
+  });
+
+  // — STEPS (#etapas) —
+  gsap.from('.steps-left', {
+    scrollTrigger: {
+      trigger: '.steps-inner',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    x: -40,
+    duration: 0.7,
+    ease: 'power2.out'
+  });
+
+  gsap.from('.step-card', {
+    scrollTrigger: {
+      trigger: '.steps-cards',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 35,
+    duration: 0.55,
+    ease: 'power2.out',
+    stagger: 0.12
+  });
+
+  // — BENEFITS (#diferenciais) —
+  gsap.from('.benefits-top-left, .benefits-top-right', {
+    scrollTrigger: {
+      trigger: '.benefits-top',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 25,
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.15
+  });
+
+  gsap.from('.benefit-card', {
+    scrollTrigger: {
+      trigger: '.benefits-cards',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 40,
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.14
+  });
+
+  gsap.from('.benefit-icon', {
+    scrollTrigger: {
+      trigger: '.benefits-cards',
+      start: 'top 80%',
+      once: true
+    },
+    scale: 0.5,
+    opacity: 0,
+    duration: 0.5,
+    ease: 'back.out(1.7)',
+    stagger: 0.14,
+    delay: 0.25
+  });
+
+  // — FAQ —
+  gsap.from('.faq-badge, .faq-title, .faq-desc, .faq-cta', {
+    scrollTrigger: {
+      trigger: '.faq-top',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 25,
+    duration: 0.55,
+    ease: 'power2.out',
+    stagger: 0.1
+  });
+
+  gsap.from('.faq-item', {
+    scrollTrigger: {
+      trigger: '.faq-list',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 20,
+    duration: 0.45,
+    ease: 'power2.out',
+    stagger: 0.09
+  });
+
+  // — CTA BANNER —
+  gsap.from('.cta-banner-inner', {
+    scrollTrigger: {
+      trigger: '.cta-banner',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    scale: 0.96,
+    y: 20,
+    duration: 0.65,
+    ease: 'power2.out'
+  });
+
+  gsap.from('.cta-banner-title, .cta-banner-desc, .cta-banner-btn', {
+    scrollTrigger: {
+      trigger: '.cta-banner',
+      start: 'top 80%',
+      once: true
+    },
+    opacity: 0,
+    y: 20,
+    duration: 0.5,
+    ease: 'power2.out',
+    stagger: 0.12,
+    delay: 0.25
+  });
+
+  // Força o recálculo após um pequeno delay (para garantir que tudo esteja estável)
+  setTimeout(function() {
+    ScrollTrigger.refresh();
+  }, 200);
+});
+
+</script>
 
 
 </body>
