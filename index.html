@@ -46,6 +46,7 @@
 <a href="https://wa.me/5591980591028?text=Olá%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais!" class="mobile-cta" target="_blank" rel="noopener noreferrer">Vamos Conversar</a>
   </div>
 
+
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -63,9 +64,6 @@
     });
   });
 </script>
-
-
-
 
 
 
@@ -524,7 +522,21 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
 
+      // fecha todos os outros itens (efeito acordeão)
+      document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        if (openItem !== item) openItem.classList.remove('open');
+      });
+
+      item.classList.toggle('open', !isOpen);
+    });
+  });
+</script>
 
 
 
